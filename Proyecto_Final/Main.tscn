@@ -1,0 +1,234 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://BackGround.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Floor.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Main.gd" type="Script" id=4]
+[ext_resource path="res://Assets/Nspike1.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Mblock1.png" type="Texture" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 83.75, 21.8674 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 15.75, 14 )
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="BackGround" parent="." instance=ExtResource( 1 )]
+
+[node name="Floor" parent="." instance=ExtResource( 3 )]
+
+[node name="Sprite" type="Sprite" parent="Floor"]
+position = Vector2( 1157, 447 )
+scale = Vector2( 3.75555, 1.02222 )
+texture = ExtResource( 6 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor/Sprite"]
+position = Vector2( -308.077, -437.283 )
+scale = Vector2( 0.266272, 0.978261 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/Sprite/StaticBody2D"]
+position = Vector2( 1159, 449.5 )
+shape = SubResource( 1 )
+
+[node name="Sprite2" type="Sprite" parent="Floor"]
+position = Vector2( 1419, 447 )
+scale = Vector2( 3.75555, 1.02222 )
+texture = ExtResource( 6 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor/Sprite2"]
+position = Vector2( -308.077, -437.283 )
+scale = Vector2( 0.266272, 0.978261 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/Sprite2/StaticBody2D"]
+position = Vector2( 1159, 449.5 )
+shape = SubResource( 1 )
+
+[node name="Sprite3" type="Sprite" parent="Floor"]
+position = Vector2( 2917.75, 447 )
+scale = Vector2( 1.47777, 1.15556 )
+texture = ExtResource( 6 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor/Sprite3"]
+position = Vector2( -308.077, -437.283 )
+scale = Vector2( 0.266272, 0.978261 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/Sprite3/StaticBody2D"]
+position = Vector2( 1157.64, 447 )
+shape = SubResource( 1 )
+
+[node name="Sprite4" type="Sprite" parent="Floor"]
+position = Vector2( 3065, 426 )
+scale = Vector2( 1.47777, 2.04444 )
+texture = ExtResource( 6 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor/Sprite4"]
+position = Vector2( -308.077, -437.283 )
+scale = Vector2( 0.266272, 0.978261 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/Sprite4/StaticBody2D"]
+position = Vector2( 1157, 444 )
+shape = SubResource( 1 )
+
+[node name="Sprite5" type="Sprite" parent="Floor"]
+position = Vector2( 3205, 404.5 )
+scale = Vector2( 1.47777, 3.13333 )
+texture = ExtResource( 6 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor/Sprite5"]
+position = Vector2( -308.077, -437.283 )
+scale = Vector2( 0.266272, 0.978261 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/Sprite5/StaticBody2D"]
+position = Vector2( 1157, 447.163 )
+shape = SubResource( 1 )
+
+[node name="Sprite7" type="Sprite" parent="Floor"]
+position = Vector2( 3499, 405 )
+scale = Vector2( 1.47777, 3.13333 )
+texture = ExtResource( 6 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor/Sprite7"]
+position = Vector2( -308.077, -437.283 )
+scale = Vector2( 0.266272, 0.978261 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/Sprite7/StaticBody2D"]
+position = Vector2( 1159.54, 446.674 )
+shape = SubResource( 1 )
+
+[node name="Sprite6" type="Sprite" parent="Floor"]
+position = Vector2( 3353.38, 362.75 )
+scale = Vector2( 5.31666, 1.25556 )
+texture = ExtResource( 6 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor/Sprite6"]
+position = Vector2( -308.077, -437.283 )
+scale = Vector2( 0.266272, 0.978261 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/Sprite6/StaticBody2D"]
+position = Vector2( 1158.15, 444.761 )
+shape = SubResource( 1 )
+
+[node name="Sprite8" type="Sprite" parent="Floor"]
+position = Vector2( 3965.19, 361 )
+scale = Vector2( 12.0805, 1.25556 )
+texture = ExtResource( 6 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor/Sprite8"]
+position = Vector2( -308.077, -437.283 )
+scale = Vector2( 0.266272, 0.978261 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/Sprite8/StaticBody2D"]
+position = Vector2( 1154.17, 447 )
+shape = SubResource( 1 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0, -3 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Obstacles" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Obstacles"]
+position = Vector2( 1272, 447 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Obstacles/Sprite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/Sprite/StaticBody2D"]
+position = Vector2( 0.5, 4 )
+shape = SubResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="Obstacles"]
+position = Vector2( 1314, 447 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Obstacles/Sprite2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/Sprite2/StaticBody2D"]
+position = Vector2( 1, 4 )
+shape = SubResource( 2 )
+
+[node name="Sprite3" type="Sprite" parent="Obstacles"]
+position = Vector2( 1978, 447 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Obstacles/Sprite3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/Sprite3/StaticBody2D"]
+position = Vector2( 1, 4 )
+shape = SubResource( 2 )
+
+[node name="Sprite4" type="Sprite" parent="Obstacles"]
+position = Vector2( 2022, 447 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Obstacles/Sprite4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/Sprite4/StaticBody2D"]
+position = Vector2( 1, 4 )
+shape = SubResource( 2 )
+
+[node name="Sprite5" type="Sprite" parent="Obstacles"]
+position = Vector2( 2449, 446 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Obstacles/Sprite5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/Sprite5/StaticBody2D"]
+position = Vector2( 0, 5 )
+shape = SubResource( 2 )
+
+[node name="Sprite6" type="Sprite" parent="Obstacles"]
+position = Vector2( 2490, 447 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Obstacles/Sprite6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/Sprite6/StaticBody2D"]
+position = Vector2( 1, 3 )
+shape = SubResource( 2 )
+
+[node name="Sprite7" type="Sprite" parent="Obstacles"]
+position = Vector2( 2971, 448 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Obstacles/Sprite7"]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Obstacles/Sprite7/StaticBody2D"]
+position = Vector2( -3, 3 )
+shape = SubResource( 2 )
+
+[node name="Sprite8" type="Sprite" parent="Obstacles"]
+position = Vector2( 3012, 448 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Obstacles/Sprite8"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/Sprite8/StaticBody2D"]
+position = Vector2( -1, 4 )
+shape = SubResource( 2 )
+
+[node name="Sprite9" type="Sprite" parent="Obstacles"]
+position = Vector2( 3114, 451 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Obstacles/Sprite9"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/Sprite9/StaticBody2D"]
+position = Vector2( -1, 4 )
+shape = SubResource( 2 )
+
+[node name="Sprite10" type="Sprite" parent="Obstacles"]
+position = Vector2( 3154, 452 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Obstacles/Sprite10"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/Sprite10/StaticBody2D"]
+position = Vector2( 1, 5 )
+shape = SubResource( 2 )
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
